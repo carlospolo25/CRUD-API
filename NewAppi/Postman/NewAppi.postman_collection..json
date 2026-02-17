@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "d1a6f7e2-1234-4abc-9def-987654321000",
+    "name": "NewAppi - Productos API",
+    "description": "Colección Postman para pruebas del CRUD de Productos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener todos los productos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://localhost:7195/api/productos",
+          "protocol": "https",
+          "host": [ "localhost" ],
+          "port": "7195",
+          "path": [ "api", "productos" ]
+        }
+      }
+    },
+    {
+      "name": "Obtener producto por id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://localhost:7195/api/productos/1",
+          "protocol": "https",
+          "host": [ "localhost" ],
+          "port": "7195",
+          "path": [ "api", "productos", "1" ]
+        }
+      }
+    },
+    {
+      "name": "Crear producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Mouse inalámbrico\",\n  \"description\": \"Mouse silencioso bluetooth\",\n  \"price\": 95.50,\n  \"stock\": 30\n}"
+        },
+        "url": {
+          "raw": "https://localhost:7195/api/productos",
+          "protocol": "https",
+          "host": [ "localhost" ],
+          "port": "7195",
+          "path": [ "api", "productos" ]
+        }
+      }
+    },
+    {
+      "name": "Actualizar producto",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Mouse gamer\",\n  \"description\": \"Mouse RGB\",\n  \"price\": 120,\n  \"stock\": 15\n}"
+        },
+        "url": {
+          "raw": "https://localhost:7195/api/productos/1",
+          "protocol": "https",
+          "host": [ "localhost" ],
+          "port": "7195",
+          "path": [ "api", "productos", "1" ]
+        }
+      }
+    },
+    {
+      "name": "Eliminar producto",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "https://localhost:7195/api/productos/1",
+          "protocol": "https",
+          "host": [ "localhost" ],
+          "port": "7195",
+          "path": [ "api", "productos", "1" ]
+        }
+      }
+    }
+  ]
+}
